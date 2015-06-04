@@ -28,6 +28,7 @@ bundle exec rake build
 
 # Rebuild the index with the new gem
 cp pkg/*.gem local/gems
+gem install builder # This is not present on Circle CI by default
 gem generate_index --update --directory local
 
 # Sync the updates back to S3
