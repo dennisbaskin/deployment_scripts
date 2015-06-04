@@ -24,7 +24,7 @@ mkdir -p local
 aws s3 sync s3://$GEM_BUCKET local
 
 # Build the gem
-rake build
+bundle exec rake build
 
 # Rebuild the index with the new gem
 cp pkg/*.gem local/gems
